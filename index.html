@@ -1,0 +1,50 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+<script>
+$(document).ready(function(){
+var current_h = null;
+var current_w = null;
+
+$('.resize').hover(
+    function(){
+        current_h = $(this, 'img')[0].height;
+        current_w = $(this, 'img')[0].width;
+        $(this).stop(true, false).animate({width: (current_w * 1.3), height: (current_h * 1.3)}, 300);
+    },
+    function(){
+        $(this).stop(true, false).animate({width: current_w + 'px', height: current_h + 'px'}, 300);
+    }
+);
+});
+</script>
+<table style="border-spacing: 80px;">
+<tr>
+<td>
+<div class="box">
+    <a href="Blog.html"><img src="http://sharealogo.com/wp-content/uploads/Blogger_ai.png" class="resize" width="250"/></a>
+</div>
+</td>
+<td>
+<div class="box">
+    <a href="Video.html"><img src="https://developers.google.com/youtube/images/YouTube-icon-full_color.png" class="resize" width="250"/></a>
+</div>
+</td>
+<td>
+<div class="box">
+    <a href="Social.html"><img src="https://plus.sent.ly/Content/images/community.png" class="resize" width="250"/></a>
+</div>
+</td>
+<td>
+<div class="box">
+    <a href="qna.html"><img src="http://i.imgur.com/fBBxtO1.png" class="resize" width="250"/></a>	
+</div>
+</td>
+</tr>
+
+</table>
+</body>
+</html>
